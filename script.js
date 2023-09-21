@@ -1,56 +1,59 @@
 //your JS code here. If required.
-const soundArray = [
-    "./mp3/applause-01.mp3",
-    "./mp3/boo.mp3",
-    "./mp3/gasp.mp3",
-    "./mp3/tada.mp3",
-    "./mp3/victory.mp3",
-    "./mp3/wrong.mp3",
-    "./mp3/stop.mp3"
-];
+let applause = document.getElementById("applause");
+let inaudio=document.getElementById("applauseAudio");
+let booaudio=document.getElementById("booAudio");
+let gaspaudio=document.getElementById("gaspAudio");
+let tadaaudio=document.getElementById("tadaAudio");
+let victoryaudio=document.getElementById("victoryAudio");
+let wrongaudio=document.getElementById("wrongAudio");
 
-const applause = document.getElementById("applause");
-const boo = document.getElementById("boo");
-const gasp = document.getElementById("gasp");
-const tada = document.getElementById("tada");
-const victory = document.getElementById("victory");
-const wrong = document.getElementById("wrong");
-const stopp = document.getElementById("stop");
-var audio;
+applause.addEventListener("click",()=>{
+   
+   inaudio.play();
+})
 
-function playSample(index) {
-    if (audio) {
-        audio.pause();
-    }
-    audio = new Audio(soundArray[index]);
-    audio.play();
-}
+let boo = document.getElementById("boo");
 
+boo.addEventListener("click",()=>{
+  
+   booaudio.play();
+})
 
-applause.addEventListener("click", function () {
-    playSample(0);
-});
+let gasp = document.getElementById("gasp");
 
-boo.addEventListener("click", function () {
-    playSample(1);
-});
+gasp.addEventListener("click",()=>{
+  
+   gaspaudio.play();
+})
 
-gasp.addEventListener("click", function () {
-    playSample(2);
-});
+let tada = document.getElementById("tada");
 
-tada.addEventListener("click", function () {
-    playSample(3);
-});
+tada.addEventListener("click",()=>{
+   
+   tadaaudio.play();
+})
 
-victory.addEventListener("click", function () {
-    playSample(4);
-});
+let victory = document.getElementById("victory");
 
-wrong.addEventListener("click", function () {
-    playSample(5);
-});
+victory.addEventListener("click",()=>{
+   
+   victoryaudio.play();
+})
 
-stopp.addEventListener("click", function () {
-    playSample(6);
-});
+let wrong = document.getElementById("wrong");
+
+wrong.addEventListener("click",()=>{
+   
+   wrongaudio.play();
+})
+
+let pause = document.getElementById("pause");
+
+pause.addEventListener("click",()=>{
+   inaudio.pause();
+   booaudio.pause();
+   gaspaudio.pause();
+   tadaaudio.pause();
+   victoryaudio.pause();
+   wrongaudio.pause();
+})
